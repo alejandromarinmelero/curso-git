@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/curso-git/static/css/main.073c9b0a.css",
-    "main.js": "/curso-git/static/js/main.59fcda27.js",
+    "main.css": "/curso-git/static/css/main.9789f797.css",
+    "main.js": "/curso-git/static/js/main.64dff950.js",
     "static/js/787.3cfb7928.chunk.js": "/curso-git/static/js/787.3cfb7928.chunk.js",
-    "static/media/logo.svg": "/curso-git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/curso-git/index.html",
-    "main.073c9b0a.css.map": "/curso-git/static/css/main.073c9b0a.css.map",
-    "main.59fcda27.js.map": "/curso-git/static/js/main.59fcda27.js.map",
+    "main.9789f797.css.map": "/curso-git/static/css/main.9789f797.css.map",
+    "main.64dff950.js.map": "/curso-git/static/js/main.64dff950.js.map",
     "787.3cfb7928.chunk.js.map": "/curso-git/static/js/787.3cfb7928.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.59fcda27.js"
+    "static/css/main.9789f797.css",
+    "static/js/main.64dff950.js"
   ]
 }
