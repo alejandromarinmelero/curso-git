@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
-import NavBar from './componentes/NavBar/NavBar';
+import Sidebar from './componentes/Sidebar/Sidebar';
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <Sidebar />
     </div>
   );
 }
