@@ -1,0 +1,101 @@
+.sidebar {
+    padding: 1rem;
+
+    h2 {
+        color: #E6E8E6;
+    }
+
+    .btn-primary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        --bs-btn-border-color: #fff;
+        --bs-btn-bg: none;
+        --bs-btn-hover-bg: #fde08f;
+        --bs-btn-active-bg: #FDCA40;
+        --bs-btn-hover-border-color: #8a8a8a;
+
+        &:hover {
+            --bs-btn-hover-border-color: #080708;
+        }
+
+        span {
+            color: #080708;
+        }
+
+    }
+
+}
+
+.offcanvas {
+    background-color: #080708;
+
+    .offcanvas-header .btn-close {
+        color: #E6E8E6;
+        background: transparent url('https://img.icons8.com/ios-filled/30/FFFFFF/delete-sign--v1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .offcanvas-title {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #E6E8E6;
+    }
+
+    .offcanvas-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        a {
+            font-size: 1.2rem;
+            font-weight: 200;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+                color: #FDCA40;
+                margin-left: 0.2rem;
+            }
+        }
+
+        .accordion {
+            --bs-accordion-bg: none;
+            --bs-accordion-border-color: none;
+            --bs-accordion-btn-padding-y: 0;
+            --bs-accordion-btn-padding-x: 0;
+            --bs-accordion-btn-color: #E6E8E6;
+            --bs-accordion-btn-icon: none;
+            --bs-accordion-active-color: #E6E8E6;
+            --bs-accordion-active-bg: none;
+            --bs-accordion-btn-focus-border-color: none;
+            --bs-accordion-btn-focus-box-shadow: none;
+            --bs-accordion-btn-active-icon: none;
+            --bs-accordion-btn-width: 2%;
+
+            .accordion-button {
+                font-size: 1.2rem;
+                font-weight: 200;
+                transition: all 0.1s ease-in-out;
+
+                &:hover {
+                    color: #FDCA40;
+                    margin-left: 0.2rem;
+                }
+            }
+
+            .accordion-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: 2rem;
+            }
+        }
+    }
+}

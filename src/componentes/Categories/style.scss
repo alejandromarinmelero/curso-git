@@ -1,0 +1,40 @@
+.categories-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4rem;
+
+    h1 {
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgb(211, 211, 211);
+
+        &::after {
+            content: url('https://img.icons8.com/fluency-systems-filled/15/null/rhombus.png');
+            margin-left: 1rem;
+        }
+
+        &::before {
+            content: url('https://img.icons8.com/fluency-systems-filled/15/null/rhombus.png');
+            margin-right: 1rem;
+        }
+    }
+
+    .categories {
+        display: flex;
+        gap: 3rem;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+            width: 15rem;
+        }
+    }
+
+    .spinner-border {
+        margin: 0 auto;
+        width: 6rem;
+        height: 6rem;
+    }
+}

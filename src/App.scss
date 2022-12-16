@@ -1,10 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap');
 @import "~bootstrap/scss/bootstrap";
 
 .App {
-  text-align: center;
   display: grid;
-  grid-template-columns: 20%, 80%;
-  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 95%;
+  max-width: 120rem;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #E6E8E6;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
 
