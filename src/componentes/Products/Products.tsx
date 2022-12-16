@@ -6,20 +6,16 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Spinner from 'react-bootstrap/esm/Spinner';
 import { NewContext } from '../../Context/GlobalContext';
-import { FormGroup } from 'react-bootstrap';
 
 const Products = () => {
 
-    const { products, categories, filter }: any = useContext(NewContext)
-
+    const { products, categories, filter, filteredProducts, deletedFilters }: any = useContext(NewContext)
 
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-
-    
 
     return (
         <div className='products-section'>
@@ -34,21 +30,28 @@ const Products = () => {
                 <Button variant="outline-success">Search</Button>
             </Form>
 
-            <Button className='filter-button' variant="primary" onClick={handleShow}>
-                <img src="https://img.icons8.com/ios/35/null/sorting-options--v1.png" alt="" />
-                Filters
-            </Button>
+            <div className='filter-actions'>
+                <Button className='filter-button' variant="primary" onClick={handleShow}>
+                    <img src="https://img.icons8.com/ios/35/null/sorting-options--v1.png" alt="" />
+                    Filters
+                </Button>
+                {filteredProducts.length > 0 &&
+                    <Button className='delete-filters-button' variant="primary" onClick={deletedFilters}>
+                        Delete Filters
+                    </Button>
+                }
+            </div>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form onSubmit={e => {filter(e)}}>
+                    <Form onSubmit={e => { filter(e) }}>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Category</Form.Label>
-                            <Form.Select aria-label="Default select example">
-                                <option disabled={true}>Choose Category</option>
+                            <Form.Select aria-label="Default select example" name='select'>
+                                <option>Choose Category</option>
                                 {categories.map((category: any) => {
                                     return <option key={category.id}>{category.name}</option>
                                 })}
@@ -58,16 +61,16 @@ const Products = () => {
                             <Form.Label>Price</Form.Label>
                             <Form.Group className="select-price">
                                 <span>From</span>
-                                <Form.Control type="number" placeholder="0" name='from'/>
+                                <Form.Control type="number" placeholder="0" name='from' />
                                 <span>to</span>
-                                <Form.Control type="number" placeholder="100" name='to'/>
+                                <Form.Control type="number" placeholder="100" name='to' />
                             </Form.Group>
                         </Form.Group>
                         <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose}>
                                 Close
                             </Button>
-                            <Button variant="primary" type="submit">
+                            <Button variant="primary" type="submit" onClick={handleClose}>
                                 Filter
                             </Button>
                         </Modal.Footer>
